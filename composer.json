@@ -1,0 +1,28 @@
+{
+  "name": "ratulsaqibkhan/file_parser",
+  "description": "File Parser for Text files",
+  "type": "library",
+  "license": "None",
+  "authors": [
+    {
+      "name": "Md. Nazmus Saqib Khan",
+      "email": "ratulkhan.jhenidah@gmail.com",
+      "role": "Maintainer"
+    }
+  ],
+  "require": {
+    "php": "^7.3|^8.0|^8.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "RatulSaqibKhan\\FileParser\\": "src/"
+    }
+  },
+  "extra": {
+    "providers": [
+      "Ratulsaqibkhan\\FileParser\\FileParserProvider"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
