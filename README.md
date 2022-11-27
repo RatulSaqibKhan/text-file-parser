@@ -8,11 +8,7 @@
       ```
       composer install
       ```
-  2. Go To example directory
-      ```
-      cd example
-      ```
-  3. Run the php script
+  2. Run the php script
       ```
       php parseFile.php
       ```
