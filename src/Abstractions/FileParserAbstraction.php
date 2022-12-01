@@ -9,16 +9,16 @@ abstract class FileParserAbstraction implements FileParserInterface
     /**
      * Source File Path
      *
-     * @var string $srcFilePath
+     * @var string $srcFileName
      */
-    public string $srcFilePath;
+    public string $srcFileName;
 
     /**
      * Destination File Path
      *
-     * @var string $destFilePath
+     * @var string $destFileName
      */
-    public string $destFilePath;
+    public string $destFileName;
 
     /**
      * Delimeter
@@ -42,7 +42,18 @@ abstract class FileParserAbstraction implements FileParserInterface
      */
     public function getSrcDir(): string
     {
-        return __DIR__."/../";
+        return __DIR__."/../../input_source/";
+    }
+
+     /**
+     * Reurn Source Directory
+     *
+     * @return string
+     *
+     */
+    public function getDestDir(): string
+    {
+        return __DIR__."/../../output_source/";
     }
 
      /**
@@ -71,9 +82,9 @@ abstract class FileParserAbstraction implements FileParserInterface
      * @return void
      *
      */
-    public function askSrcFilePath(): void
+    public function askSrcFileName(): void
     {
-        $this->srcFilePath = $this->getSrcDir() . $this->getInput();
+        $this->srcFileName = $this->getSrcDir() . $this->getInput();
     }
 
     /**
@@ -82,9 +93,9 @@ abstract class FileParserAbstraction implements FileParserInterface
      * @return void
      *
      */
-    public function askDestFilePath(): void
+    public function askDestFileName(): void
     {
-        $this->destFilePath = $this->getSrcDir() . $this->getInput();
+        $this->destFileName = $this->getDestDir() . $this->getInput();
     }
 
     /**
