@@ -34,6 +34,13 @@ abstract class FileParserAbstraction implements FileParserInterface
      */
     public int $columns;
 
+    /**
+     * Splitted Files Count
+     *
+     * @var string $splittedFiles
+     */
+    public string $splittedFiles;
+
      /**
      * Reurn Source Directory
      *
@@ -118,6 +125,17 @@ abstract class FileParserAbstraction implements FileParserInterface
     public function askColumnsNo(): void
     {
         $this->columns = (int)$this->getInput();
+    }
+
+    /**
+     * Ask No of Splitted Files
+     *
+     * @return void
+     *
+     */
+    public function askSplittedFilesNo(): void
+    {
+        $this->splittedFiles = (int)$this->getInput();
     }
 
     /**
