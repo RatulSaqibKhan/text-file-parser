@@ -24,7 +24,7 @@ class FileParserAction extends FileParserAbstraction
         $this->askColumnsNo();
         $this->printMessage("Write destination file name: ");
         $this->askDestFileName();
-        $fw = fopen($this->destFileName, "w");
+        $fw = fopen($this->destFilePath, "w");
 
         $tempString = "";
         $lineCounter = 0;

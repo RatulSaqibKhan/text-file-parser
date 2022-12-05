@@ -2,4 +2,4 @@
 
 require './vendor/autoload.php';
 
-(new RatulSaqibKhan\FileParser\Actions\FileParserAction)->parse();
+(new RatulSaqibKhan\FileParser\Actions\FileSplitterAction)->parse();

@@ -21,6 +21,13 @@ abstract class FileParserAbstraction implements FileParserInterface
     public string $destFileName;
 
     /**
+     * Destination File Path
+     *
+     * @var string $destFilePath
+     */
+    public string $destFilePath;
+
+    /**
      * Delimeter
      *
      * @var string $delimeter
@@ -102,7 +109,19 @@ abstract class FileParserAbstraction implements FileParserInterface
      */
     public function askDestFileName(): void
     {
-        $this->destFileName = $this->getDestDir() . $this->getInput();
+        $this->destFileName = $this->getInput();
+        $this->setDestFilePath();
+    }
+
+    /**
+     * Set Source File Path
+     *
+     * @return void
+     *
+     */
+    public function setDestFilePath(): void
+    {
+        $this->destFilePath = $this->getDestDir() . $this->destFileName;
     }
 
     /**
